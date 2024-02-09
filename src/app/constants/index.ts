@@ -1,1 +1,1 @@
-export const API_URI = "https://google.com/api";
+export const API_URI = "http://localhost:8002/api";

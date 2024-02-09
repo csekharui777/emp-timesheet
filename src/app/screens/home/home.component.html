@@ -1,1 +1,39 @@
-<p>home works!</p>
+<p>{{adhaarData | json}}</p>
+<h1>{{v | async}}</h1>
+<ul>
+    <li *ngFor="let adhaar of (adhaarData | filterActiveUser)">{{adhaar.name}} - {{adhaar.no | adhaarmask}}</li>
+</ul>
+<div class="container">
+<div class="row">
+    <div *ngFor="let news of (latestNews)" class="col-md-3">
+        <div class="card " style="width: 18rem;">
+            <img class="card-img-top" src="{{news.imgPath || 'https://placehold.co/600x400'}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{news.title}}</h5>
+              <p class="card-text">{{news.shortDesc}}</p>
+              <a href="#" class="btn btn-primary">{{news.createdAt | date}}</a>
+            </div>
+          </div>
+          <br/>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+<!-- Home is parent componets -->
+
+<!-- 1,2,3, are the child component -->
+
+<!-- 1,2,3, are the sibling components component  -->
+
+<!-- parent - child Communication @Input 
+     Child to pareent communication @Output
+     Sibling component communication  services -->
+<app-chiild-one [name]="oneName" (passDateToParent)="getChildDate($event)"></app-chiild-one>
+<h1>Counter:  {{count}}</h1>
+<app-chiild-two (inc)="increment()" (dec)="decrement()" name = "Phani"></app-chiild-two>
+<app-chiild-three name="Devi"></app-chiild-three>

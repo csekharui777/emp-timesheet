@@ -1,0 +1,25 @@
+Pipes: transform the data from one form to another form.
+defualt pipes in anuglar:
+ 1. uppercase - 
+ 2. lowercares
+ 3. date
+ 4. currency
+ 5. number
+ 6. Async pipes - it waits until process to complete to show the data. 
+ 7. Json pipe - to bind the json data into element
+
+const fn = function () {};   // syncrouns - excutes imedialty - typof fn(function)
+const fnn = new Promise((r,e)=> r());  // Async - excutes iin while medialty - typof fn(BOject)
+
+{{ data | uppercase }}
+{{ data | date: values }}
+
+
+
+
+
+
+
+
+Pure Pipes
+Impure Pipes

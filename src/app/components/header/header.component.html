@@ -1,3 +1,8 @@
 <header>
-    <h1>{{fullName}}</h1>
+    <h1 appDoColor [color]="color">1: {{fullName | uppercase}} {{color}}</h1>
+    <!-- <h1 appDoColor color="green">2: {{fullName}}</h1>
+    <p *ngIf="showStatus">{{status}}</p>
+     <ul >
+        <li *ngFor="let s of [1,2,3,4,5]; let ind = index;" >{{ind+1}}</li>
+     </ul> -->
 </header>

@@ -1,0 +1,13 @@
+<p>{{name}}</p>
+<button  (click)="clickEvent('red')">Red</button>
+<button  (click)="clickEvent('green')">green</button>
+<button  (click)="clickEvent('yellow')">yellow</button>
+<button  (click)="clickEvent('black')">black</button>
+
+<h1 appToggleElement [show]="toggleElement">H1 Tag</h1>
+<h2 appToggleElement [show]="toggleElement">H2 Tag</h2>
+<h3 appToggleElement [show]="toggleElement">H3 Tag</h3>
+<h4 appToggleElement [show]="toggleElement">H4 Tag</h4>
+
+<button (click)="showAndHide()">Toggle</button>
+

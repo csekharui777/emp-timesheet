@@ -1,0 +1,14 @@
+API:
+Middleware:
+
+API URL, URI, End point.
+
+Htpp methods:
+
+GET - ge the data by url - get bus tickets based on datte - url, headers
+POST - send data and process the data - book the ticket - url, data, headers
+PUT -  update the existing data - Changing the date or location - url/id, data, headers
+PATCH - Add data to existing data - add notes - url/id, data, headers
+DELETE - delete the existing data - cancel the ticket - url/id, headers
+OPTIONAL - check the http method calling. - 
+

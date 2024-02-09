@@ -18,6 +18,16 @@ import { RegisterComponent } from './modules/auth/register/register.component';
 import { AdminHeaderComponent } from './components/admin-header/admin-header.component';
 import { AdminSidemenuComponent } from './components/admin-sidemenu/admin-sidemenu.component';
 import { AdminFooterComponent } from './components/admin-footer/admin-footer.component';
+import { SuccessBtnDirective } from './success-btn.directive';
+import { DoColorDirective } from './directives/do-color.directive';
+import { MyDataPipe } from './my-data.pipe';
+import { AdhaarmaskPipe } from './adhaarmask.pipe';
+import { FilterActiveUserPipe } from './filter-active-user.pipe';
+import { ChiildOneComponent } from './components/chiild-one/chiild-one.component';
+import { ChiildTwoComponent } from './components/chiild-two/chiild-two.component';
+import { ChiildThreeComponent } from './components/chiild-three/chiild-three.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ToggleElementDirective } from './directives/toggle-element.directive';
 
 @NgModule({
   declarations: [
@@ -36,11 +46,24 @@ import { AdminFooterComponent } from './components/admin-footer/admin-footer.com
     RegisterComponent,
     AdminHeaderComponent,
     AdminSidemenuComponent,
-    AdminFooterComponent
+    AdminFooterComponent,
+    SuccessBtnDirective,
+    DoColorDirective,
+    MyDataPipe,
+    AdhaarmaskPipe,
+    FilterActiveUserPipe,
+    ChiildOneComponent,
+    ChiildTwoComponent,
+    ChiildThreeComponent,
+    ToggleElementDirective
+  ],
+  exports:[
+    AdhaarmaskPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

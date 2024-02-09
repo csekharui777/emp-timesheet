@@ -1,0 +1,23 @@
+services: it acts like a middleware which container logic set of actions.
+services:
+
+
+name.api.services: 
+cats, subCats, producs -- http calls
+
+cats.servics:
+maniputlate cats data
+maniputlate subCats data
+maniputlate producs data
+
+cats Add:
+cats.servics:
+--> adding cateofy
+
+Subcats Add:
+cats.servics:
+--> adding subCats
+
+Producs Add:
+cats.servics:
+--> adding producs

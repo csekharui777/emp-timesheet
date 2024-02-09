@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedDataService } from 'src/app/services/shared/shared-data.service';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   private name: string = "Chandra";
   private prefix: string = "MR";
+
+  color = "red"
+
+  public status: string = "Online";
+  public showStatus: boolean = true;
   // public fullName: string = `${this.prefix} ${this.name}`;
 
   get fullName() {
@@ -15,10 +21,14 @@ export class HeaderComponent implements OnInit {
     // return this.prefix + this.name;
   }
 
-  constructor() { }
+  constructor(private shareDateSerice: SharedDataService) { }
 
   ngOnInit(): void {
+    this.shareDateSerice.sharedData.subscribe(res => {
+      this.color = res;
+    })
   }
+
 
 }
 

@@ -1,0 +1,14 @@
+Directives : used manipulated the DOM structure or elements;
+
+Types: 
+  System
+  Custome
+
+  Angular Directives; *ngIf, *ngFor *ngSwtich, *ngClass,  NgStyle, ngModel
+  Attribute Directives
+  structural Directives
+  behavioural Directives.
+
+ngIf = (structural Directives) = reshape the DOM - add/remove DOM.
+
+<p

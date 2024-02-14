@@ -1,1 +1,1 @@
-export const API_URI = "http://localhost:8002/api";
+export const API_URI = "https://jsonplaceholder.typicode.com/";

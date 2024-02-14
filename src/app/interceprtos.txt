@@ -1,0 +1,18 @@
+Inteceptos: it intercepts the http calls.
+            - pre-calling
+            - post-calling;
+use:
+   Headers handling
+   Error handling
+   Loging mechanisam
+   Mock the services
+
+
+API-100 -> Header (user='chandra")
+
+API-50 -> Header(user="Phan")
+API-50 -> Headers(user="Uday")
+
+
+WithLogin calls => pass the Bearer toekn
+WithoutLogin calls => no need pass the Bearer Token 

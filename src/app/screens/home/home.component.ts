@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
     this.newsService.getAll().subscribe((res) => {
       this.latestNews = res.data
     }, (error) => {
-      alert(error);
+      // alert(error);
     })
   }
 

@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { HttpCallerService } from 'src/app/utils/http-caller.service';
 import { Observable } from 'rxjs';
+import { HttpCallerService } from 'src/app/utils/http-caller.service';
 const url = "";
-
 @Injectable({
   providedIn: 'root'
 })
-export class TimesheetApiService {
+export class DashboardService {
 
   constructor(private httpCaller: HttpCallerService) {
-    this.httpCaller.setUri("posts");
+    this.httpCaller.setUri("news");
   }
   add(data: any): any {
     return this.httpCaller.post(data);
@@ -49,6 +47,4 @@ export class TimesheetApiService {
   // delete(id:string): any {
   //   return this.httpClient.delete(`${url}/${id}`, headers);
   // }
-
-
 }

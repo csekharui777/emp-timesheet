@@ -26,8 +26,12 @@ import { FilterActiveUserPipe } from './filter-active-user.pipe';
 import { ChiildOneComponent } from './components/chiild-one/chiild-one.component';
 import { ChiildTwoComponent } from './components/chiild-two/chiild-two.component';
 import { ChiildThreeComponent } from './components/chiild-three/chiild-three.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ToggleElementDirective } from './directives/toggle-element.directive';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SampleInterceptor } from './sample.interceptor';
+import { HeaderInterceptor } from './interceptors/header.interceptor';
+import { LoggerInterceptor } from './interceptors/logger.interceptor';
 
 @NgModule({
   declarations: [
@@ -63,9 +67,16 @@ import { ToggleElementDirective } from './directives/toggle-element.directive';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS, useClass: HeaderInterceptor, multi:true,
+  },
+  {
+    provide: HTTP_INTERCEPTORS, useClass: LoggerInterceptor, multi:true,
+  }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
